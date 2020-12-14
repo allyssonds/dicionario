@@ -1,29 +1,21 @@
 import 'package:dicionario_sebastianico/database.dart';
 import 'package:dicionario_sebastianico/palavra.dart';
+import 'package:dicionario_sebastianico/theme.dart';
 import 'package:flutter/material.dart';
 
-class NovaPalavra extends StatefulWidget {
-  @override
-  _NovaPalavraState createState() => _NovaPalavraState();
-}
-
-class _NovaPalavraState extends State<NovaPalavra> {
+class NovaPalavra extends StatelessWidget {
   final nomeController = TextEditingController();
   final significadoController = TextEditingController();
-
-  @override
-  void dispose() {
-    // Clean up the controller when the widget is disposed.
-    nomeController.dispose();
-    significadoController.dispose();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Nova Palavra"),
+        backgroundColor: color1,
+        title: Text(
+          "NOVA PALAVRA",
+          style: TextStyle(color: color4),
+        ),
       ),
       body: Column(
         children: <Widget>[
@@ -54,11 +46,13 @@ class _NovaPalavraState extends State<NovaPalavra> {
           ),
           RaisedButton(
             padding: EdgeInsets.all(15),
-            color: Colors.blue,
+            color: color2,
             textColor: Colors.white,
-            child: Text("Salvar"),
+            child: Text("SALVAR"),
             onPressed: () async {
-              Palavra novaPalavra = Palavra(nome: nomeController.text, significado: significadoController.text);
+              Palavra novaPalavra = Palavra(
+                  nome: nomeController.text,
+                  significado: significadoController.text);
               await DBhelper().inserirPalavra(novaPalavra);
               Navigator.pop(context);
             },

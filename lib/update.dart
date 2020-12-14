@@ -1,6 +1,6 @@
 import 'package:dicionario_sebastianico/database.dart';
 import 'package:dicionario_sebastianico/palavra.dart';
-
+import 'package:dicionario_sebastianico/theme.dart';
 import 'package:flutter/material.dart';
 
 class UpdatePalavra extends StatelessWidget {
@@ -15,7 +15,11 @@ class UpdatePalavra extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Atualizar Palavra"),
+        backgroundColor: color1,
+        title: Text(
+          "ATUALIZAR PALAVRA",
+          style: TextStyle(color: color4),
+        ),
       ),
       body: Padding(
         padding: EdgeInsets.all(15),
@@ -41,16 +45,20 @@ class UpdatePalavra extends StatelessWidget {
               padding: EdgeInsets.all(15),
             ),
             MaterialButton(
-              color: Colors.blue,
+              color: color2,
               textColor: Colors.white,
               padding: EdgeInsets.all(15),
-              child: Text("Atualizar"),
+              child: Text("ATUALIZAR"),
               onPressed: () async {
                 await DBhelper().updatePalavra(
                   Palavra(
                     id: palavra.id,
-                    nome: (novoNomeController.text.isEmpty ? palavra.nome : novoNomeController.text),
-                    significado: (novoSignificadoController.text.isEmpty ? palavra.significado : novoSignificadoController.text),
+                    nome: (novoNomeController.text.isEmpty
+                        ? palavra.nome
+                        : novoNomeController.text),
+                    significado: (novoSignificadoController.text.isEmpty
+                        ? palavra.significado
+                        : novoSignificadoController.text),
                   ),
                 );
                 Navigator.pop(context);
