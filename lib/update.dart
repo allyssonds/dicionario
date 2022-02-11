@@ -1,6 +1,6 @@
-import 'package:dicionario_sebastianico/database.dart';
-import 'package:dicionario_sebastianico/palavra.dart';
-import 'package:dicionario_sebastianico/theme.dart';
+import 'package:dicionario/database.dart';
+import 'package:dicionario/palavra.dart';
+import 'package:dicionario/theme.dart';
 import 'package:flutter/material.dart';
 
 class UpdatePalavra extends StatelessWidget {
