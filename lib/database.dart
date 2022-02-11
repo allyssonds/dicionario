@@ -1,6 +1,6 @@
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
-import 'package:dicionario_sebastianico/palavra.dart';
+import 'package:dicionario/palavra.dart';
 
 class DBhelper {
   // CONNECTA AO BANCO DE DADOS
