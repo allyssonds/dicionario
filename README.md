@@ -1,4 +1,4 @@
-# dicionario_sebastianico
+# dicionario
 
 A new Flutter project.
 
