@@ -1,8 +1,8 @@
-import 'package:dicionario_sebastianico/database.dart';
-import 'package:dicionario_sebastianico/novaPalavra.dart';
-import 'package:dicionario_sebastianico/palavra.dart';
-import 'package:dicionario_sebastianico/update.dart';
-import 'package:dicionario_sebastianico/theme.dart';
+import 'package:dicionario/database.dart';
+import 'package:dicionario/novaPalavra.dart';
+import 'package:dicionario/palavra.dart';
+import 'package:dicionario/update.dart';
+import 'package:dicionario/theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -25,7 +25,7 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(
           title: Text(
-            "DICIONÁRIO SEBASTIANICO",
+            "DICIONÁRIO",
             style: TextStyle(color: color4),
           ),
           backgroundColor: color1,
